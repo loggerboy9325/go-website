@@ -1,0 +1,95 @@
+package contactform
+
+import "github.com/loggerboy9325/website-go-htmx-temple/view/layout"
+
+type ContactParams struct {
+	Name    string
+	Email   string
+	Message string
+	Success bool
+}
+
+type ContactErrors struct {
+	Email   string
+	Name    string
+	Message string
+}
+
+templ Index() {
+	@layout.App(true) {
+		<div class=" flex mb-20  justify-center mt-[calc(100vh-100vh+8rem)]">
+			<div class="max-w-md shadow-lg shadow-primary w-full bg-base-300 py-12 px-8 rounded-xl">
+				@Contactform(ContactParams{}, ContactErrors{})
+			</div>
+		</div>
+	}
+}
+
+templ Contactform(params ContactParams, errors ContactErrors) {
+	<form hx-post="/contact-form" hx-swap="outerHTML">
+		<h1 class="text-center text-2xl text-primary font-semibold">Contact Me</h1>
+		<div class="w-full">
+			<div class="label"></div>
+			<input
+				class="input input-bordered border-primary w-full"
+				type="email"
+				value={ params.Email }
+				name="email"
+				autocomplete="on"
+				placeholder="Email Address"
+			/>
+			if len(errors.Email) > 0 {
+				<div class="label">
+					<span class="label-text-alt text-error">{ errors.Email }</span>
+				</div>
+			}
+		</div>
+		<div class="w-full">
+			<div class="label"></div>
+			<input
+				class="input input-bordered border-primary w-full"
+				type="text"
+				value={ params.Name }
+				name="name"
+				autocomplete="on"
+				placeholder="Name"
+			/>
+			if len(errors.Name) > 0 {
+				<div class="label">
+					<span class="label-text-alt text-error">{ errors.Name }</span>
+				</div>
+			}
+		</div>
+		<div class="w-full">
+			<div class="label"></div>
+			<textarea
+				class=" input h-16 input-bordered border-primary w-full"
+				type="textarea"
+				value={ params.Message }
+				name="message"
+				autocomplete="off"
+				placeholder="Message"
+				rows="4"
+			></textarea>
+			if len(errors.Message) > 0 {
+				<div class="label">
+					<span class="label-text-alt text-error">{ errors.Message }</span>
+				</div>
+			}
+		</div>
+		<button type="submit" class="btn btn-primary w-full mt-8">Submit <i class="fa-solid fa-arrow-right"></i></button>
+	</form>
+}
+
+templ ContactSuccess(params ContactParams) {
+	<div class=" grow  justify-center mt-[calc(100vh-100vh+8rem)]">
+		<div class="max-w-md w-full bg-base-300   rounded-xl">
+			<h1 class=" text-center text-primary mb-28 text-2xl font-semibold">
+				Thank you { params.Name } <i class="fa-regular fa-face-smile"></i>
+			</h1>
+		</div>
+	</div>
+}
+
+templ ContactFailure() {
+}
