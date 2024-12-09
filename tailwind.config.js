@@ -6,7 +6,7 @@ module.exports = {
     require("daisyui", "@tailwindcss/typography")
   ],
   daisyui: {
-    themes: ["sunset"]
+    themes: ["forest"]
   }
   
 

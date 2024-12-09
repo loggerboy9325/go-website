@@ -45,7 +45,7 @@ func App(nav bool) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<footer class=\" w-full text-center bg-base-100 py-12  \"><div class=\" mt-auto  border-t  border-primary px-2 text-primary \"><div class=\"text-center mt-3 text-3xl  \"><a href=\"https://github.com/loggerboy9325\" target=\"_blank\"><i class=\"fa-brands fa-square-github\"></i></a> <a href=\"https://www.linkedin.com/in/george-wettlaufer-iv/\" target=\"_blank\"><i class=\"fa-brands fa-linkedin\"></i></a> <a href=\"mailto:georgewettiv@gmail.com\" target=\"_blank\"><i class=\"fa-solid fa-envelope\"></i></a></div></div></footer></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<footer class=\" w-full text-3xl text-primary text-center bg-base-100 py-12  \"><a href=\"https://github.com/loggerboy9325\" target=\"_blank\"><i class=\"fa-brands fa-square-github\"></i></a> <a href=\"https://www.linkedin.com/in/george-wettlaufer-iv/\" target=\"_blank\"><i class=\"fa-brands fa-linkedin\"></i></a> <a href=\"mailto:georgewettiv@gmail.com\" target=\"_blank\"><i class=\"fa-solid fa-envelope\"></i></a></footer></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
