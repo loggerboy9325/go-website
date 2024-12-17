@@ -43,7 +43,7 @@ func Index() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-2xl w-full mx-auto mt-8\"><h1 class=\"text-2xl text-center font-semibold border-b border-primary pb-2\">George Wettlaufer IV</h1></div><div class=\" shadow-2xl shadow-primary flex flex-row h-96 w-96 mx-auto mt-8 rounded-full mb-40 justify-center \"><img src=\"/public/profile.jpg\" alt=\"profile picture\" class=\" rounded-full w-96 h-96\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-2xl w-full mx-auto mt-8\"><h1 class=\"text-2xl text-center font-semibold border-b border-primary pb-2\">George Wettlaufer IV</h1></div><div class=\"  flex flex-row h-96 w-96 mx-auto mt-8 rounded-full mb-40 justify-center \"><img src=\"/public/profile.jpg\" alt=\"profile picture\" class=\"transition-all duration-500 hover:animate-bounce rounded-full w-96 h-96\"></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

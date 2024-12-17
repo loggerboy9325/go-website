@@ -55,7 +55,7 @@ func Blog(articles []string) templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\" flex  h-screen flex-col items-center justify-center mt-10\"><div class=\"max-w-lg flex-grow shadow-lg shadow-primary w-full bg-base-300 py-12 px-8 rounded-xl\"><h1 class=\"text-2xl font-semibold text-primary mb-5 text-center\">Blogs</h1><ul class=\"text-center text-primary font-semibold text-lg\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex mb-20  justify-center mt-[calc(100vh-100vh+8rem)]\"><div class=\"max-w-md shadow-lg shadow-primary w-full bg-base-300 py-12 px-8 rounded-xl\"><h1 class=\" text-2xl font-semibold text-primary mb-5 text-center\">Blogs</h1><ul class=\"text-center text-primary font-semibold text-lg\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -76,7 +76,7 @@ func Blog(articles []string) templ.Component {
 				var templ_7745c5c3_Var4 string
 				templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(article)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/blog/blog.templ`, Line: 25, Col: 76}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `view/blog/blog.templ`, Line: 25, Col: 77}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 				if templ_7745c5c3_Err != nil {
@@ -134,7 +134,7 @@ func Article(articledata string) templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-2xl h-screen w-full mx-auto mt-8\"><p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-2xl min-h-screen w-full mx-auto mt-8\"><p>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
