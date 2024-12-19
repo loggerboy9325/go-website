@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"embed"
 	"fmt"
+	"sort"
 	"strings"
 
 	chromahtml "github.com/alecthomas/chroma/v2/formatters/html"
@@ -76,5 +77,8 @@ func GetAssets() ([]string, error) {
 
 		filenames = append(filenames, file)
 	}
+	sort.Slice(filenames, func(i, j int) bool {
+		return filenames[i] < filenames[j]
+	})
 	return filenames, nil
 }
