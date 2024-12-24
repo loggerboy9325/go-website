@@ -43,7 +43,7 @@ func Websiteinfo() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\" flex  justify-center mt-10\"><div class=\"max-w-lg shadow-lg shadow-primary w-full bg-base-300 py-12 px-8 rounded-xl\"><h1 class=\"text-2xl font-semibold text-primary mb-5 text-center\">Front End</h1><img src=\"/public/go-htmx-2.png\" class=\"mt-2 rounded-xl\"></div></div><div class=\" flex  justify-center  mt-[calc(100vh-100vh+8rem)]\"><div class=\"max-w-lg shadow-lg shadow-primary w-full bg-base-300 py-12 px-8 rounded-xl\"><h1 class=\"text-2xl font-semibold text-primary mb-5 text-center\">Back End</h1><img src=\"/public/backend-diagram.png\" class=\"mt-2 rounded-xl\"></div></div>")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

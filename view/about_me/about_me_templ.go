@@ -43,7 +43,7 @@ func Aboutme() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-2xl mb-20 w-full mx-auto mt-8\"><h1 class=\"text-2xl text-center font-semibold border-b border-primary pb-2\">About Me</h1><p class=\"mt-8 text-xl\">Hello! I'm George Wettlaufer, a junior tech enthusiast with a strong foundation in Amazon Web Services (AWS). I am passionate about cloud computing and eager to grow my skills and knowledge in this dynamic field. I have been working with Amazon Web Services, learning how to manage cloud infrastructure and deploy scalable solutions. My experience with AWS has given me a solid understanding of creating secure, efficient, and cost-effective cloud environments.<br>I am proficient in services such as EC2, S3, RDS, and Lambda, and I am constantly expanding my knowledge of the AWS ecosystem. I believe in continuous learning and staying updated with the latest industry trends. My approach is collaborative and detail-oriented, always aiming for excellence in every project I undertake. Outside of my professional interests, I enjoy running, coding, anything with computers. These activities keep me balanced and inspired. Get in Touch I'm always open to new opportunities and collaborations. Feel free to reach out to me or connect with me on LinkedIn, GitHub, or other platforms.</p></div>")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
