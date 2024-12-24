@@ -28,8 +28,8 @@ func main() {
 
 	router.Handle("/*", http.StripPrefix("/", http.FileServer(http.FS(FS))))
 	router.Get("/", handler.Make(handler.HandlerHomeIndex))
-	router.Get("/blog", handler.Make(handler.BlogIndexHandler))
-	router.Get("/articles/{slug}", handler.Make(func(w http.ResponseWriter, r *http.Request) error {
+	router.Get("/journal", handler.Make(handler.BlogIndexHandler))
+	router.Get("/journal/{slug}", handler.Make(func(w http.ResponseWriter, r *http.Request) error {
 		return handler.BlogArticleHandler(w, r, parser)
 	}))
 	router.Get("/contact-form", handler.Make(handler.ContactFormHandler))

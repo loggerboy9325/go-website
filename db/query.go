@@ -12,10 +12,3 @@ func CreateContact(contact *types.Contact) error {
 		Exec(context.Background())
 	return err
 }
-
-func CreateArticle(article *types.Article) error {
-	_, err := Bun.NewInsert().
-		Model(article).
-		Exec(context.Background())
-	return err
-}

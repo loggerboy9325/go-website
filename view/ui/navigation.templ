@@ -1,17 +1,17 @@
 package ui
 
 templ Navigation() {
-<nav class=" text-center  bg-base-100 justify-center text-primary border-b border-primary mx-auto ">
-  <a href="/" class="btn btn-ghost shadow-gray-700 text-2xl ">Home</a>
-  <a href="/about-me" class="btn btn-ghost text-2xl">About Me</a>
-  <a href="/resume" class="btn btn-ghost text-2xl">Resume</a>
-  <a href="/contact-form" class="btn btn-ghost text-2xl">Contact Me</a>
-  <a href="/blog" class="btn btn-ghost text-2xl">Blog</a>
-  <a href="/website-info" class="btn btn-ghost text-2xl">Website Info</a>
-  <a class="btn btn-ghost text-2xl" href="./../../public/Resume1.pdf" download="Resume.pdf">Download Resume</a>
-  <a class=" text-2xl font-semibold">Visitors: </a>
-  <span class="font-semibold text-2xl" id="visit"></span>
-  <script type="text/javascript">
+	<nav class=" text-center  bg-base-100 justify-center text-primary border-b border-primary mx-auto ">
+		<a href="/" class="btn btn-ghost shadow-gray-700 text-2xl ">Home</a>
+		<a href="/about-me" class="btn btn-ghost text-2xl">About Me</a>
+		<a href="/resume" class="btn btn-ghost text-2xl">Resume</a>
+		<a href="/contact-form" class="btn btn-ghost text-2xl">Contact Me</a>
+		<a href="/journal" class="btn btn-ghost text-2xl">My Journal</a>
+		<a href="/website-info" class="btn btn-ghost text-2xl">Website Info</a>
+		<a class="btn btn-ghost text-2xl" href="./../../public/Resume1.pdf" download="Resume.pdf">Download Resume</a>
+		<a class=" text-2xl font-semibold">Visitors: </a>
+		<span class="font-semibold text-2xl" id="visit"></span>
+		<script type="text/javascript">
     const getvisitors = async () => {
       try {
         const url =
@@ -31,5 +31,5 @@ templ Navigation() {
 
 
   </script>
-</nav>
+	</nav>
 }
