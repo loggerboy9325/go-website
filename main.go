@@ -32,6 +32,7 @@ func main() {
 	router.Get("/journal/{slug}", handler.Make(func(w http.ResponseWriter, r *http.Request) error {
 		return handler.BlogArticleHandler(w, r, parser)
 	}))
+
 	router.Get("/contact-form", handler.Make(handler.ContactFormHandler))
 	router.Get("/about-me", handler.Make(handler.AboutMeHandler))
 	router.Get("/resume", handler.Make(handler.ResumeHandler))

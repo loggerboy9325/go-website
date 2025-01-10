@@ -7,3 +7,7 @@
 - Templ
 - Tailwind css
 - Hosted on apprunner
+
+## Website URL
+
+- [https://gwresume.com/](https://gwresume.com/)
